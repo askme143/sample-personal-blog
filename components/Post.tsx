@@ -19,17 +19,26 @@ const Post = ({
   imageSrc,
 }: PostProps) => {
   return (
-    <div className="post w-full h-[260px] p-9 flex justify-between items-center border border-stroke rounded-[5px]">
-      <div className="left-side w-full h-full max-w-[480px] shrink flex flex-col justify-between space-y-[16px]">
-        <button className="title-description h-[140px] flex flex-col text-left shrink space-y-[8px]">
-          <div className="title font-bold text-lg max-w-[420px] shrink-0">
-            {title}
-          </div>
-          <div className="description w-full h-full overflow-y-hidden text-body text-base">
+    <div className="post w-full h-fit md:h-[260px] p-6 md:p-9 flex flex-col justify-between items-center border border-stroke rounded-[5px]">
+      <div className="post-content w-full h-[352px] shrink flex flex-col-reverse md:flex-row justify-between space-y-[16px]">
+        <button className="title-description max-w-[480px] h-[140px] flex flex-col text-left shrink space-y-[8px]">
+          <div className="title font-bold text-lg max-w-[420px]">{title}</div>
+          <div className="description h-full overflow-y-hidden text-body text-base">
             {description}
           </div>
         </button>
-        <div className="author shrink-0 flex items-center space-x-[10px]">
+        <div className="w-full md:w-[210px] h-[164px] md:h-[140px] my-6 md:py-0 md:pl-[9px] shrink-0 text-right overflow-hidden">
+          <Image
+            src={imageSrc}
+            layout="responsive"
+            width={201}
+            height={140}
+            alt="post image"
+          />
+        </div>
+      </div>
+      <div className="post-footer w-full mt-[8px] md:mt-[1px] h-fit md:shrink-0 flex justify-between items-end">
+        <div className="author shrink-0 h-[32px] flex flex-wrap items-center space-x-[10px] overflow-hidden">
           <button>
             <User />
           </button>
@@ -39,16 +48,9 @@ const Post = ({
           <div className="name font-normal text-sm text-body">∙</div>
           <div className="name font-normal text-sm text-body">{ago}</div>
         </div>
-      </div>
-      <div className="right-side w-[210px] ml-[10px] h-full shrink-0 flex flex-col justify-between items-end">
-        <Image
-          src={imageSrc}
-          width={201}
-          height={140}
-          alt="post image"
-          className="w-[201px] h-[140px]"
-        />
-        <div className="date font-normal text-body text-sm">{date}</div>
+        <div className="date h-[17px] hidden md:block font-normal text-body text-sm">
+          {date}
+        </div>
       </div>
     </div>
   );

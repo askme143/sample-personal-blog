@@ -3,7 +3,7 @@ import Illustration from "public/illustration.svg";
 const Announce = () => {
   return (
     <div className="announcement w-full min-h-[252px] flex justify-between items-end bg-[#F6CA45]">
-      <div className="left-side w-full h-fit max-w-[394px] pl-9 py-9 shrink flex flex-col justify-between space-y-[16px]">
+      <div className="left-side w-full h-fit max-w-[394px] px-6 py-9 md:pl-9 md:py-9 shrink flex flex-col justify-between space-y-[16px]">
         <div className="title-description h-fit flex flex-col shrink space-y-[8px]">
           <div className="title font-bold text-[18px] max-w-[420px] shrink-0">
             Announcing a new platform, Codewell.

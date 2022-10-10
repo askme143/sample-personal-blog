@@ -48,11 +48,11 @@ const Home: NextPage = () => {
           </div>
           <RightSide />
         </div>
-
-        <CookieWindow />
       </main>
 
       <Footer />
+
+      <CookieWindow />
     </div>
   );
 };
