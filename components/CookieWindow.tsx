@@ -15,7 +15,7 @@ const CookieWindow = () => {
   };
 
   return cookieAllowed === undefined ? (
-    <div className="cookie-container w-full max-w-[1300px] px-[20px] fixed top-[641px] flex justify-end z-10">
+    <div className="cookie-container w-full max-w-[1300px] px-[20px] fixed bottom-[120px] flex justify-end z-10">
       <div className="cookie-window p-[36px]  border border-stroke rounded-[5px] bg-white">
         <div className="title-description w-[326px] grow-0">
           <div className="title flex items-center">
