@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Illustration from "public/illustration.svg";
 
 const Announce = () => {

@@ -11,6 +11,10 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    loader: "custom",
+  },
+  assetPrefix: ".",
 };
 
 module.exports = nextConfig;

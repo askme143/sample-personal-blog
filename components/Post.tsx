@@ -1,5 +1,5 @@
 import User from "public/user.svg";
-import Image from "next/image";
+import Image from "components/Image";
 
 interface PostProps {
   title: string;

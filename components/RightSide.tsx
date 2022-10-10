@@ -13,10 +13,10 @@ const RightSide = () => {
         </div>
         <hr className="border-t border-stroke" />
         <div className="projects flex flex-col space-y-[9px] font-normal text-body text-base">
-          <div>Codewell</div>
-          <div>Spense</div>
-          <div>YelpCamp</div>
-          <div>Google Algorithms</div>
+          <a href="#">Codewell</a>
+          <a href="#">Spense</a>
+          <a href="#">YelpCamp</a>
+          <a href="#">Google Algorithms</a>
         </div>
       </div>
     </div>
