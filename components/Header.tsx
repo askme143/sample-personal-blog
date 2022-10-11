@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="nav-container w-full max-w-[1260px] h-fit flex flex-col">
+    <header className="nav-container w-full max-w-[1260px] h-fit flex flex-col relative">
       <div className="nav-bar w-full h-[24px] lg:h-[49px] max-w-[1260px] flex flex-row items-center justify-between">
         <button className="logo font-bold text-base text-black">
           <h3>Jessica Davidson</h3>
@@ -41,7 +41,7 @@ const Header = () => {
         </button>
       </div>
       {menuOpened ? (
-        <div className="nav-modal flex lg:hidden flex-col w-full h-fit mt-3 animate-slideDown origin-top">
+        <div className="nav-modal flex lg:hidden flex-col w-full h-fit mt-3 animate-slideDown origin-top -z-10">
           <hr className="separator border-t border-stroke"></hr>
           <div className="h-fit flex flex-col justify-center items-center font-normal text-base text-body">
             <button className="h-fit w-full p-[10px]">Writings</button>
