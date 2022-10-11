@@ -18,6 +18,15 @@ module.exports = {
         headings: "#110e27",
         stroke: "dadada",
       },
+      animation: {
+        slideDown: "slideDown 300ms ease-in-out forwards",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

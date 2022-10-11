@@ -1,21 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cookie from "public/cookie.svg";
 
 const CookieWindow = () => {
   const [cookieAllowed, setCookieAllowed] = useState<boolean | undefined>(
     undefined
   );
+  const [fadedOut, setFadedOut] = useState<boolean | undefined>(
+    cookieAllowed !== undefined ? true : undefined
+  );
+
+  useEffect(() => {
+    if (fadedOut === undefined || fadedOut) return;
+
+    const timeout = setTimeout(() => {
+      setFadedOut(true);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [fadedOut]);
 
   const onClickAccept = () => {
     setCookieAllowed(true);
+    setFadedOut(false);
   };
 
   const onClickDecline = () => {
     setCookieAllowed(false);
+    setFadedOut(false);
   };
 
-  return cookieAllowed === undefined ? (
-    <div className="cookie-container w-fit max-w-[1300px] fixed bottom-[120px] right-[15px] md:right-[40px] lg:right-[90px] flex justify-end z-10">
+  return cookieAllowed === undefined || !fadedOut ? (
+    <div
+      className={`transition-opacity ease-out duration-300 ${
+        fadedOut !== undefined ? "opacity-0" : "opacity-100"
+      } cookie-container w-fit max-w-[1300px] fixed bottom-[120px] right-[15px] md:right-[40px] lg:right-[90px] flex justify-end z-10`}
+    >
       <div className="cookie-window p-[36px] border border-stroke rounded-[5px] bg-white">
         <div className="title-description w-[326px] grow-0">
           <div className="title flex items-center">

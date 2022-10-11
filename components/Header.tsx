@@ -41,7 +41,7 @@ const Header = () => {
         </button>
       </div>
       {menuOpened ? (
-        <div className="nav-modal flex lg:hidden flex-col w-full h-fit mt-3">
+        <div className="nav-modal flex lg:hidden flex-col w-full h-fit mt-3 animate-slideDown origin-top">
           <hr className="separator border-t border-stroke"></hr>
           <div className="h-fit flex flex-col justify-center items-center font-normal text-base text-body">
             <button className="h-fit w-full p-[10px]">Writings</button>
